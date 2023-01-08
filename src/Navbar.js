@@ -16,7 +16,7 @@ function Navbar() {
                 </svg>
 
             <div className='amount-container'>
-            <p className='total-amount'>{state.cart.length}</p>
+            <p className='total-amount'>{state.amount}</p>
             </div>
 
             </div>

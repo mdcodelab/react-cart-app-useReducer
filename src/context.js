@@ -33,6 +33,16 @@ const AppProvider = ({children}) => {
   }
 
 
+React.useEffect(() => {
+dispatch({type: "CALCULATE_TOTAL"});
+console.log("hello");
+}, [state.cart])
+
+React.useEffect(() => {
+  dispatch({type: "TOTAL_AMOUNT"})
+
+}, [state.cart])
+
 
   return <AppContext.Provider value={{
     ...state, 

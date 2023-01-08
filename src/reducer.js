@@ -27,6 +27,20 @@ const reducer = (state, action) => {
             return {...state, cart: tempCart}
           }
 
+          if(action.type === "CALCULATE_TOTAL") {
+            let totalPay = state.cart.reduce((acc, curr) => {
+                return acc+curr.price*curr.amount
+            }, 0)
+            return {...state, total: totalPay}
+          }
+
+          if(action.type === "TOTAL_AMOUNT") {
+            let totalAmount= state.cart.reduce((acc, curr) => {
+              return acc+curr.amount
+          }, 0)
+            return {...state, amount: totalAmount}
+          }
+
         
         
           
